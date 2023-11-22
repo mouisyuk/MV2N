@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "config": {
+    "appName": "velux-marketing-cm",
+    "rootPlaceholders": [
+      "main"
+    ],
+    "sitecoreConfigPath": "/App_Config/Include/zzz",
+    "graphQLEndpointPath": "/api/velux-marketing-cm",
+    "language": "en",
+    "appLanguages": [
+      "en"
+    ]
+  },
+  "scripts": {
+    "start": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap --parallel nuxt:dev watch-components\"",
+    "build": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap generate-components nuxt:build\"",
+    "nuxt:build": "nuxt build",
+    "nuxt:dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "bootstrap": "node scripts/bootstrap.js",
+    "watch-components": "node scripts/generate-component-factory.js --watch",
+    "generate-components": "node scripts/generate-component-factory.js",
+    "generate-entry-file": "node scripts/generate-entry-file.js"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "nuxt": "^3.8.2",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.8.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@sitecore-jss/sitecore-jss-vue": "^21.5.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pinia": "^2.1.7"
+  }
+}
