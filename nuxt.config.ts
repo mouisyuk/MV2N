@@ -3,22 +3,22 @@ import serverConfig  from './server/server.config';
 
 export default defineNuxtConfig({
   plugins: [
-    '@/modules/jss/standard/sitecore-jss-placeholder-plugin.js',
+    './modules/jss/standard/sitecore-jss-placeholder-plugin.js',
     { 
-      src: '@/plugins/export-route-data-context-plugin', 
+      src: '~/plugins/export-route-data-context-plugin', 
       mode: 'server' 
     },
     // '@nuxtjs/tailwindcss',
   ],
   modules: [
-    '@/modules/express/initialize',
+    '~/modules/express/initialize',
     '@pinia/nuxt',
     [
-      '@/modules/jss/standard/initialize', 
+      '~/modules/jss/standard/initialize', 
       { dataFetcherType: 'axios' }
     ],
     [
-      '@/modules/jss/rendering-host/initialize',
+      '~/modules/jss/rendering-host/initialize',
       {
         enabled: true,
         resolveRenderingHostPublicUrl: () => {
