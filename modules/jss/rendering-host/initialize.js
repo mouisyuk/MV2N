@@ -7,7 +7,7 @@ const {
 // TODO: attach jss config to Nuxt config or module options
 const {
   getConfig: getJssConfigRenderingHost,
-} = require("../../../../Velux/temp/jss-config-rendering-host");
+} = require("../../../temp/jss-config-rendering-host");
 
 export default function initialize(moduleOptions, nuxt) {
   if (!moduleOptions.enabled) {
