@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       { dataFetcherType: 'axios' }
     ],
     [
-      '~/modules/jss/rendering-host/initialize',
+      '~/modules/jss/rendering-host/initialize.js',
       {
         enabled: true,
         resolveRenderingHostPublicUrl: () => {
